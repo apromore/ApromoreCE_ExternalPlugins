@@ -1,0 +1,41 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1606822154704
+Build-Jdk: 1.8.0_265
+Built-By: ubuntu
+Bundle-ClassPath: .,automaton-1.11-8.jar
+Bundle-Description: Long Distance Plugin
+Bundle-License: http://www.gnu.org/licenses/lgpl-3.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: Long Distance portal plugin
+Bundle-SymbolicName: org.apromore.plugin.long-distance-portal-plugin
+Bundle-Version: 1.1.0
+Created-By: Apache Maven Bundle Plugin
+Embed-Dependency: automaton;scope=compile|runtime
+Embedded-Artifacts: automaton-1.11-8.jar;g="dk.brics.automaton";a="autom
+ aton";v="1.11-8"
+Export-Package: org.apromore.plugin.portal.longdistance;version="1.1.0";
+ uses:="org.apromore.plugin.portal,org.apromore.portal.custom.gui.plugin
+ ,org.springframework.stereotype"
+Import-Package: 
+ javax.inject,
+ org.apache.commons.math3.util;version="[3.6,4)",
+ org.apromore.helper;version="[1.1,2)",
+ org.apromore.model;version="[1.1,2)",
+ org.apromore.plugin.portal;version="[1.1,2)",
+ org.apromore.portal.custom.gui.plugin;version="[1.1,2)",
+ org.apromore.processmining.models.graphbased.directed;version="[1.0,2)"
+ ,
+ org.apromore.processmining.models.graphbased.directed.bpmn;version="[1.
+ 0,2)",
+ org.apromore.processmining.models.graphbased.directed.bpmn.elements;ver
+ sion="[1.0,2)",
+ org.apromore.service;version="[1.1,2)",
+ org.apromore.service.bpmndiagramimporter;version="[1.1,2)",
+ org.deckfour.xes.model;version="[2.27,3)",
+ org.slf4j;version="[1.7,2)",
+ org.springframework.stereotype;version="[3.1,4)",
+ org.zkoss.zul;version="[8.6,9)",
+ org.apromore.plugin;version="[1.1,2)",
+ org.springframework.beans.factory.aspectj;version="[3.1,4)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-3.0.0.201509101326
