@@ -264,6 +264,7 @@ public class LongDistancePlugin extends PluginCustomGui {
     
     private void expandAndAddRegionsOpt(Activity outActivity, Set<State> region, Automaton aL) {
     	
+    	String finalRegions = "";
     	LOGGER.info("Expanding region of the size: " + region.size());
     	Character outSymbol = mapOfSymbols.get(outActivity.getLabel());
 
@@ -506,7 +507,8 @@ public class LongDistancePlugin extends PluginCustomGui {
 			}
 		}
     	LOGGER.info("New region found " + region);
-//    	Messagebox.show("New region found: " + region);
+    	finalRegions += "New region: " + region + "\n";
+    	//Messagebox.show("New region found: " + region);
     	incomingTransitions =  findIncomingTransitions(region, aL);
     	String in = "";
     	Set<String> inStrings = new HashSet<String>();
@@ -533,6 +535,7 @@ public class LongDistancePlugin extends PluginCustomGui {
     	}
     	LOGGER.info("Out: " + out);
     	
+    	Messagebox.show(finalRegions);
     	return;
     }
     
@@ -756,7 +759,7 @@ public class LongDistancePlugin extends PluginCustomGui {
     		}
     	}
     	
-    	Messagebox.show("New region found: " + typeOfActivity);
+    	//Messagebox.show("New region found: " + typeOfActivity);
     	LOGGER.info("New region found " + region);
     	return;
     }
